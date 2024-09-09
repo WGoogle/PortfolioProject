@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo Simulation</title>
+</head>
+<body>
+    <h1>Monte Carlo Simulation Results</h1>
+
+    <div>
+        <h2>Summary Statistics</h2>
+        {{ results|safe }}
+    </div>
+
+    <div>
+        <h2>Distribution of Simulated Returns</h2>
+        <img src="{{ plot_url }}" alt="Monte Carlo Simulation Plot">
+    </div>
+</body>
+</html>
