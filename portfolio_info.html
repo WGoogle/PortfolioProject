@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Summary</title>
+</head>
+<body>
+    <h1>Your Portfolio Summary</h1>
+    <table border="1">
+        <tr>
+            <th>Ticker</th>
+            <th>Quantity</th>
+            <th>Purchase Price</th>
+            <th>Current Price</th>
+            <th>Purchase Date</th>
+            <th>Total Value</th>
+            <th>Positve/Negative</th>
+            <th>Years Kept</th>
+            <th>Total Return</th>
+            <th>Annualized Return</th>
+            <th>Volatility</th>
+            <th>Sharpe Ratio</th>
+            <th>Sortino Ratio</th>
+        </tr>
+        {% for stock in portfolio %} <!-- using the engine Flask is on, created a nice for loop-->
+        <tr>
+            <td>{{ stock.ticker }}</td>
+            <td>{{ stock.quantity }}</td>
+            <td>{{ stock.purchase_price }}</td>
+            <td>{{ stock.current_price }}</td>
+            <td>{{ stock.purchase_date }}</td>
+            <td>{{ stock.total_value }}</td>
+            <td>{{ stock.plus_or_minus }}</td>
+            <td>{{ stock.years_kept }}</td>
+            <td>{{ stock.total_return }}</td>
+            <td>{{ stock.annualized_return }}</td>
+            <td>{{ stock.volatility }}</td>
+            <td>{{ stock.sharpe_ratio }}</td>
+            <td>{{ stock.sortino_ratio }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
